@@ -16,17 +16,17 @@ export default {
     ]
   },
   
-  rules: [
-    {
-      test: /\.s[ac]ss$/i,
-      use: ['style-loader', 'css-loader', 'sass-loader']
-    }
-  ],
+  // rules: [
+  //   {
+  //     test: /\.s[ac]ss$/i,
+  //     use: ['style-loader', 'css-loader', 'sass-loader']
+  //   }
+  // ],
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    '~/assets/scss/main.scss'
-  ],
+  // css: [
+  //   '~/assets/scss/main.scss'
+  // ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -59,12 +59,12 @@ export default {
     baseURL: '/',
   },
 
-  build: {
-    loaders: {
-      sass: { implementation: require('sass') },
-      scss: { implementation: require('sass') },
+  // build: {
+  //   loaders: {
+  //     sass: { implementation: require('sass') },
+  //     scss: { implementation: require('sass') },
 
-    }
-  },
+  //   }
+  // },
 
 }
