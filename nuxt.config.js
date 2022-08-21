@@ -15,11 +15,11 @@ export default {
       { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }
     ]
   },
-  
+
   // rules: [
   //   {
   //     test: /\.s[ac]ss$/i,
-  //     use: ['style-loader', 'css-loader', 'sass-loader']
+      // use: ['style-loader', 'css-loader', 'sass-loader']
   //   }
   // ],
 
@@ -45,7 +45,24 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/auth-next'
   ],
+
+  // Axios module configuration: https://go.nuxtjs.dev/config-axios
+  axios: {
+    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
+    baseURL: 'https://vese-api.herokuapp.com',
+    proxyHeaders: false,
+    credentials: false
+  },
+
+  auth: {
+    strategies: {
+      google: {
+        clientId: '...'
+      },
+    }
+  },
 
   bootstrapVue: {
     icons: true,
@@ -53,18 +70,12 @@ export default {
     bootstrapVueCSS: false
   },
 
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {
-    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
-  },
-
+  // Build Configuration: https://go.nuxtjs.dev/config-build
   // build: {
   //   loaders: {
   //     sass: { implementation: require('sass') },
   //     scss: { implementation: require('sass') },
 
   //   }
-  // },
-
+  // }
 }
