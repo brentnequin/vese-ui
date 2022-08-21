@@ -43,10 +43,6 @@
       </b-row>
     </Section>
 
-    <divider />
-
-    <Section fluid>This is a fluid section</Section>
-
   </div>
 </page>
 </template>
